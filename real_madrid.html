@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Informações do Real Madrid</title>
+</head>
+
+<body>
+    <h1>Informações do Real Madrid</h1>
+    <p>Nome do clube: <span id="clube"></span></p>
+    <p>Ano de fundação: <span id="fundacao"></span></p>
+    <p>Treinador: <span id="treinador"></span></p>
+
+    <h2>Jogadores:</h2>
+    <ul id="jogadores">
+    </ul>
+
+    <script>
+        var data = {
+            "clube": "Real Madrid",
+            "fundacao": 1902,
+            "treinador": "Carlo Ancelotti",
+            "jogadores": [
+                {
+                    "nome": "Thibaut Courtois",
+                    "posicao": "Goleiro"
+                },
+                {
+                    "nome": "Dani Carvajal",
+                    "posicao": "Lateral Direito"
+                },
+                {
+                    "nome": "Éder Militão",
+                    "posicao": "Zagueiro"
+                },
+                {
+                    "nome": "Luka Modric",
+                    "posicao": "Meio-campista"
+                },
+                {
+                    "nome": "Rodrygo",
+                    "posicao": "Atacante"
+                },
+                {
+                    "nome": "Vinicius Jr.",
+                    "posicao": "Atacante"
+                }
+            ]
+
+
+        };
+
+        document.getElementById("clube").textContent = data.clube;
+        document.getElementById("fundacao").textContent = data.fundacao;
+        document.getElementById("treinador").textContent = data.treinador;
+
+        var jogadoresList = document.getElementById("jogadores");
+        data.jogadores.forEach(function (jogador) {
+            var li = document.createElement("li");
+            li.textContent = jogador.nome + " - " + jogador.posicao;
+            jogadoresList.appendChild(li);
+        });
+    </script>
+</body>
+
+</html>

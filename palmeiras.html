@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Informações do Palmeiras</title>
+</head>
+
+<body>
+    <h1>Informações do Palmeiras</h1>
+    <p>Nome do clube: <span id="clube"></span></p>
+    <p>Ano de fundação: <span id="fundacao"></span></p>
+    <p>Treinador: <span id="treinador"></span></p>
+
+    <h2>Jogadores:</h2>
+    <ul id="jogadores">
+    </ul>
+
+    <script>
+        var data = {
+            "clube": "Palmeiras",
+            "fundacao": 1914,
+            "treinador": "Abel Ferreira",
+            "jogadores": [
+                {
+                    "nome": "Weverton",
+                    "posicao": "Goleiro"
+                },
+                {
+                    "nome": "Marcos Rocha",
+                    "posicao": "Lateral Direito"
+                },
+                {
+                    "nome": "Gustavo Gómez",
+                    "posicao": "Zagueiro"
+                },
+                {
+                    "nome": "Zé Rafael",
+                    "posicao": "Meio-campista"
+                },
+                {
+                    "nome": "Raphael Veiga",
+                    "posicao": "Meio-campista"
+                },
+                {
+                    "nome": "Rony",
+                    "posicao": "Atacante"
+                }
+            ]
+        };
+
+        document.getElementById("clube").textContent = data.clube;
+        document.getElementById("fundacao").textContent = data.fundacao;
+        document.getElementById("treinador").textContent = data.treinador;
+
+        var jogadoresList = document.getElementById("jogadores");
+        data.jogadores.forEach(function (jogador) {
+            var li = document.createElement("li");
+            li.textContent = jogador.nome + " - " + jogador.posicao;
+            jogadoresList.appendChild(li);
+        });
+    </script>
+</body>
+
+</html>

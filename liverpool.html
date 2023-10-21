@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Informações do Liverpool</title>
+</head>
+
+<body>
+    <h1>Informações do Liverpool</h1>
+    <p>Nome do clube: <span id="clube"></span></p>
+    <p>Ano de fundação: <span id="fundacao"></span></p>
+    <p>Treinador: <span id="treinador"></span></p>
+
+    <h2>Jogadores:</h2>
+    <ul id="jogadores">
+    </ul>
+
+    <script>
+        var data = {
+            "clube": "Liverpool",
+                "fundacao": 1892,
+                    "treinador": "Jurgen Klopp",
+                        "jogadores": [
+                            {
+                                "nome": "Alisson Becker",
+                                "posicao": "Goleiro"
+                            },
+                            {
+                                "nome": "Trent Alexander-Arnold",
+                                "posicao": "Lateral Direito"
+                            },
+                            {
+                                "nome": "Virgil van Dijk",
+                                "posicao": "Zagueiro"
+                            },
+                            {
+                                "nome": "Mac Allister",
+                                "posicao": "Meio-campista"
+                            },
+                            {
+                                "nome": "Mohamed Salah",
+                                "posicao": "Atacante"
+                            },
+                            {
+                                "nome": "Darwin Núñez",
+                                "posicao": "Atacante"
+                            }
+                        ]
+        };
+
+        document.getElementById("clube").textContent = data.clube;
+        document.getElementById("fundacao").textContent = data.fundacao;
+        document.getElementById("treinador").textContent = data.treinador;
+
+        var jogadoresList = document.getElementById("jogadores");
+        data.jogadores.forEach(function (jogador) {
+            var li = document.createElement("li");
+            li.textContent = jogador.nome + " - " + jogador.posicao;
+            jogadoresList.appendChild(li);
+        });
+    </script>
+</body>
+
+</html>
