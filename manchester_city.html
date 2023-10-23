@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Manchester City</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Manchester City</h1>
+    <button id="toggle-info">Mostrar/Esconder Informações</button>
+    <div id="info-container" style="display: none;">
+        <p>Informações sobre o time:</p>
+        <ul>
+            <li>Nome: Manchester City</li>
+            <li>Fundação: 1880</li>
+            <li>Estádio: Etihad Stadium</li>
+            <li>Títulos: Premier League, FA Cup, EFL Cup, etc.</li>
+        </ul>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#toggle-info").click(function () {
+                $("#info-container").toggle();
+            });
+        });
+    </script>
+</body>
+</html>

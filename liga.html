@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liga da Justiça Sem Limites</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>Liga da Justiça Sem Limites</h1>
+    <button id="toggle-info">Mostrar/Esconder Informações</button>
+    <div id="info-container" style="display: none;">
+        <p>Informações sobre a Liga da Justiça Sem Limites:</p>
+        <ul>
+            <li>Série de animação de super-heróis</li>
+            <li>Personagens icônicos, como Superman, Batman, Mulher-Maravilha, entre outros</li>
+            <li>Produzida pela Warner Bros. Animation</li>
+            <li>Exibida de 2004 a 2006</li>
+        </ul>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("#toggle-info").click(function () {
+                $("#info-container").toggle();
+            });
+        });
+    </script>
+</body>
+</html>
